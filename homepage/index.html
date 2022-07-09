@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').addEventListener('submit', function(e) {
+                    let name = document.querySelector('#name').value;
+                    let utterance = new SpeechSynthesisUtterance(`hello, ${name}`);
+                    window.speechSynthesis.speak(utterance);
+                    e.preventDefault();
+                });
+            });
+
+        </script>
+
+    </head>
+    <body class="center-index">
+
+        <header class="large">
+            <ul class="m-3 nav">
+                    <li class="nav-item">
+                    <a class="nav-link text-white" href="travel.html">Travel</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-white" href="sports.html">Sports</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-white" href="Music.html">Music</a>
+                    </li>
+            </ul>
+            <form>
+                <input autocomplete="off" autofocus id="name" placeholder="Name" type="text">
+                <input type="submit">
+            </form>
+            <p></p>
+            Welcome to my home page!
+            <p></p>
+        </header>
+            <main class="medium">
+
+                <p>
+                My name is Gui and I'm 21 years old, I'm from Brazil and currently enroled as a Business Finance student at Siena College, NY.
+                </p>
+
+                <iframe width="1080" height="720"
+                src="https://www.youtube.com/embed/_ITiwPMUzho?autoplay=1&mute=1">
+                </iframe>
+
+            </main>
+        <footer class="small">
+            Copyright &#169; Gui
+        </footer>
+    </body>
+</html>
